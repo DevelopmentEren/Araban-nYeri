@@ -1,0 +1,47 @@
+﻿@model Student
+
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Apply</title>
+	<link rel="icon" href="~/car.png" />
+</head>
+
+<body>
+
+	<form method="post" asp-action="apply">
+		<div asp-validation-summary="All"></div>
+
+		<p>
+			<label asp-for="Name">Name :</label>
+			<input asp-for="Name"/>
+		</p>
+
+		<p>
+			<label asp-for="Email">Email :</label>
+			<input asp-for="Email"/>
+		</p>
+
+		<p>
+			<label asp-for="Phone">Phone :</label>
+			<input asp-for="Phone"/>
+		</p>
+
+		<p>
+			<label asp-for="WillAttend">WillAttend :</label>
+			<select asp-for="WillAttend">
+				<option value="">Select an option</option>
+				<option value="true">Yes , I will attend.</option>
+				<option value="false">No , I no will attend.</option>
+			</select>
+		</p>
+
+		<button type="submit">Submit</button>
+
+	</form>
+
+</body>
+</html>

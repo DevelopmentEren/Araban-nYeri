@@ -1,0 +1,27 @@
+﻿@model Student
+
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Thanks</title>
+	<link rel="icon" href="~/car.png" />
+</head>
+
+<body>
+	<h2>@Model.Name</h2>
+	<hr />
+	@if (Model.WillAttend == true)
+	{
+		@:Kursa katıldın.
+	}
+	else
+	{
+		@:Kursa katılmadın.
+	}
+
+	<p>Kursa katılanları <a asp-action="List">listele</a></p>
+</body>
+</html>
